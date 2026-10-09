@@ -12,9 +12,11 @@
   <meta property="og:url" content="https://juniorjfsny.github.io/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/">
   <meta property="og:title" content="PBALM | Partido Brasileiro da Autonomia Libertária Minarquista">
   <meta property="og:description" content="Projeto político conceitual sobre autonomia individual, minarquismo, liberalismo clássico e anarcocapitalismo no Brasil.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/juniorjfsny/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/main/logo.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PBALM | Partido Brasileiro da Autonomia Libertária Minarquista">
   <meta name="twitter:description" content="Projeto político conceitual sobre autonomia individual, minarquismo, liberalismo clássico e anarcocapitalismo no Brasil.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/juniorjfsny/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/main/logo.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,23 +147,19 @@
     .brand-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       font-size: 1.25rem;
       font-weight: 900;
       letter-spacing: 0.05em;
       color: var(--text-main);
     }
 
-    .brand-logo .symbol {
-      width: 36px;
-      height: 36px;
+    .brand-logo-img {
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--gold-primary), #B8860B);
-      color: #0F172A;
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      font-size: 1.1rem;
+      object-fit: cover;
+      border: 2px solid var(--gold-primary);
       box-shadow: 0 0 12px var(--gold-glow);
     }
 
@@ -319,9 +317,9 @@
     }
 
     .seal-emblem {
-      width: min(280px, 100%);
+      width: min(320px, 100%);
       aspect-ratio: 1;
-      border: 2px solid var(--gold-primary);
+      border: 3px solid var(--gold-primary);
       border-radius: 50%;
       display: grid;
       place-items: center;
@@ -329,6 +327,7 @@
       background: radial-gradient(circle, rgba(229,193,88,0.05) 0%, transparent 70%);
       box-shadow: 0 0 0 12px rgba(229, 193, 88, 0.08), 0 0 0 24px rgba(229, 193, 88, 0.03);
       animation: pulseGlow 4s infinite alternate ease-in-out;
+      overflow: hidden;
     }
 
     @keyframes pulseGlow {
@@ -336,27 +335,11 @@
       100% { box-shadow: 0 0 0 18px rgba(229, 193, 88, 0.12), 0 0 0 32px rgba(229, 193, 88, 0.05); }
     }
 
-    .seal-inner {
-      width: 70%;
-      height: 70%;
-      border: 1px dashed var(--gold-primary);
+    .seal-logo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
       border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: var(--gold-primary);
-    }
-
-    .seal-inner .star {
-      font-size: 2.2rem;
-      line-height: 1;
-    }
-    .seal-inner .text {
-      font-size: 0.75rem;
-      font-weight: 900;
-      letter-spacing: 0.25em;
-      margin-top: 6px;
     }
 
     .hero-stats {
@@ -902,7 +885,7 @@
   <header class="top-header">
     <div class="container nav-bar">
       <a href="#inicio" class="brand-logo">
-        <span class="symbol">✦</span>
+        <img src="logo.jpg" alt="PBALM Logo" class="brand-logo-img">
         <span>PBALM</span>
       </a>
 
@@ -960,12 +943,9 @@
 
         <div class="hero-badge-container">
           <div class="seal-emblem">
-            <div class="seal-inner">
-              <span class="star">✦</span>
-              <span class="text">LIBERDADE</span>
-            </div>
+            <img src="logo.jpg" alt="Logo PBALM Oficial" class="seal-logo-img">
           </div>
-          <p style="font-size:0.8rem; color: var(--text-dim);">Símbolo conceitual de autonomia e voluntarismo.</p>
+          <p style="font-size:0.8rem; color: var(--text-dim);">Emblema Oficial PBALM — Liberdade • Autonomia • Força</p>
         </div>
       </div>
     </section>
