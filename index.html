@@ -12,11 +12,11 @@
   <meta property="og:url" content="https://juniorjfsny.github.io/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/">
   <meta property="og:title" content="PBALM | Partido Brasileiro da Autonomia Libertária Minarquista">
   <meta property="og:description" content="Projeto político conceitual sobre autonomia individual, minarquismo, liberalismo clássico e anarcocapitalismo no Brasil.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/juniorjfsny/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/main/logo.jpg">
+  <meta property="og:image" content="https://raw.githubusercontent.com/juniorjfsny/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/main/emblema-pbalm.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="PBALM | Partido Brasileiro da Autonomia Libertária Minarquista">
   <meta name="twitter:description" content="Projeto político conceitual sobre autonomia individual, minarquismo, liberalismo clássico e anarcocapitalismo no Brasil.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/juniorjfsny/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/main/logo.jpg">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/juniorjfsny/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/main/emblema-pbalm.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -157,10 +157,8 @@
     .brand-logo-img {
       width: 44px;
       height: 44px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid var(--gold-primary);
-      box-shadow: 0 0 12px var(--gold-glow);
+      object-fit: contain;
+      filter: drop-shadow(0 0 8px var(--gold-glow));
     }
 
     .nav-links {
@@ -317,29 +315,25 @@
     }
 
     .seal-emblem {
-      width: min(320px, 100%);
-      aspect-ratio: 1;
-      border: 3px solid var(--gold-primary);
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
+      width: min(380px, 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
-      background: radial-gradient(circle, rgba(229,193,88,0.05) 0%, transparent 70%);
-      box-shadow: 0 0 0 12px rgba(229, 193, 88, 0.08), 0 0 0 24px rgba(229, 193, 88, 0.03);
-      animation: pulseGlow 4s infinite alternate ease-in-out;
-      overflow: hidden;
-    }
-
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 0 12px rgba(229, 193, 88, 0.08), 0 0 0 24px rgba(229, 193, 88, 0.03); }
-      100% { box-shadow: 0 0 0 18px rgba(229, 193, 88, 0.12), 0 0 0 32px rgba(229, 193, 88, 0.05); }
+      background: transparent;
+      padding: 10px;
     }
 
     .seal-logo-img {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.6)) drop-shadow(0 0 25px rgba(229, 193, 88, 0.25));
+      transition: var(--transition);
+    }
+    .seal-logo-img:hover {
+      transform: scale(1.03);
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.75)) drop-shadow(0 0 35px rgba(229, 193, 88, 0.4));
     }
 
     .hero-stats {
@@ -885,7 +879,7 @@
   <header class="top-header">
     <div class="container nav-bar">
       <a href="#inicio" class="brand-logo">
-        <img src="logo.jpg" alt="PBALM Logo" class="brand-logo-img">
+        <img src="emblema-pbalm.png" alt="Emblema PBALM" class="brand-logo-img">
         <span>PBALM</span>
       </a>
 
@@ -943,7 +937,7 @@
 
         <div class="hero-badge-container">
           <div class="seal-emblem">
-            <img src="logo.jpg" alt="Logo PBALM Oficial" class="seal-logo-img">
+            <img src="emblema-pbalm.png" alt="Emblema PBALM com Animais Heráldicos" class="seal-logo-img">
           </div>
           <p style="font-size:0.8rem; color: var(--text-dim);">Emblema Oficial PBALM — Liberdade • Autonomia • Força</p>
         </div>
