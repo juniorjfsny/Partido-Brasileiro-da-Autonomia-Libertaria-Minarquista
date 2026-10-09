@@ -14,3 +14,9 @@ contato:<junior.jfsn@yahoo.com>
 git config user.name "juniorjfsny"
 git config user.email "junior.jfsn@yahoo.com"
 ```
+
+### logon GitHub
+
+```
+git remote -v; git status -sb; if command -v gh >/dev/null 2>&1; then gh auth status; else printf '\nGitHub CLI (gh) não está instalado.\n'; fi
+```
