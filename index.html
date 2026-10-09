@@ -1020,6 +1020,19 @@
         display: block;
       }
     }
+
+    /* --- Expanded educational sections --- */
+    .principle-list { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+    .principle-item { padding:24px; border:1px solid var(--border-color); border-radius:var(--radius-md); background:var(--bg-surface); }
+    .principle-item h3 { margin-bottom:9px; color:var(--gold-primary); }
+    .principle-item p, .principle-item li { color:var(--text-muted); font-size:.94rem; }
+    .principle-item ul { padding-left:20px; margin-top:10px; }
+    .content-note { border:1px solid var(--border-color); border-radius:var(--radius-md); padding:18px 22px; color:var(--text-muted); background:var(--bg-surface); margin:20px 0; }
+    .content-note strong { color:var(--gold-primary); }
+    .roadmap-number { display:inline-grid; place-items:center; width:36px; height:36px; border-radius:50%; background:var(--gold-glow); color:var(--gold-primary); font-weight:900; margin-bottom:12px; }
+    .source-link { color:var(--teal-accent); text-decoration:underline; text-underline-offset:3px; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; transition-duration:.01ms !important; } }
+
   </style>
 </head>
 
@@ -1040,12 +1053,13 @@
         <span>PBALM</span>
       </a>
 
-      <nav class="nav-links" id="nav-links">
+      <nav class="nav-links" id="nav-links" aria-label="Navegação principal">
         <a href="#manifesto">Manifesto</a>
         <a href="#principios">Princípios</a>
         <a href="#correntes">Correntes</a>
         <a href="#simulador">Simulador</a>
         <a href="#programa">Programa</a>
+        <a href="#diretrizes">Diretrizes</a>
         <a href="#governanca">Governança</a>
         <a href="#faq">FAQ</a>
         <a href="#referencias">Referências</a>
@@ -1057,7 +1071,7 @@
           <span id="theme-icon">🌙</span>
           <span id="theme-text" style="font-size:0.8rem; font-weight:700;">Modo</span>
         </button>
-        <button class="menu-mobile-btn" id="menu-btn" aria-label="Abrir menu">☰</button>
+        <button class="menu-mobile-btn" id="menu-btn" aria-label="Abrir menu" aria-controls="nav-links" aria-expanded="false">☰</button>
       </div>
     </div>
   </header>
@@ -1073,7 +1087,7 @@
             <strong>Partido Brasileiro da Autonomia Libertária Minarquista.</strong> Uma proposta de convergência política e filosófica inspirada no liberalismo clássico, no minarquismo, no libertarianismo e no anarcocapitalismo.
           </p>
           <div class="hero-buttons">
-            <a href="#simulador" class="btn btn-gold">Teste seu Alinhamento ✦</a>
+            <a href="#simulador" class="btn btn-gold">Conheça as correntes ✦</a>
             <a href="#programa" class="btn btn-outline">Explorar Programa</a>
           </div>
 
@@ -1255,7 +1269,7 @@
         <div class="section-header">
           <div class="section-kicker">04 / Ferramenta Interativa</div>
           <h2 class="section-title">Simulador de Alinhamento Libertário</h2>
-          <p class="section-desc">Responda a 4 perguntas simples para identificar com qual corrente suas visões políticas mais convergem.</p>
+          <p class="section-desc">Responda às perguntas para explorar afinidades aproximadas com diferentes correntes. O resultado é educativo, não uma avaliação científica nem uma filiação política.</p>
         </div>
 
         <div class="quiz-box">
@@ -1324,7 +1338,7 @@
           </form>
 
           <div class="quiz-result" id="quiz-result">
-            <h3 style="color: var(--gold-primary); margin-bottom: 10px;" id="result-title">Seu resultado</h3>
+            <h3 style="color: var(--gold-primary); margin-bottom: 10px;" id="result-title">Sua afinidade aproximada</h3>
             <p id="result-desc" style="color: var(--text-muted);"></p>
           </div>
         </div>
@@ -1348,6 +1362,8 @@
             <button class="filter-chip" data-filter="Economia">Economia</button>
             <button class="filter-chip" data-filter="Tributos">Tributos</button>
             <button class="filter-chip" data-filter="Cidadania">Cidadania</button>
+            <button class="filter-chip" data-filter="Instituições">Instituições</button>
+            <button class="filter-chip" data-filter="Justiça">Justiça</button>
             <button class="filter-chip" data-filter="Tecnologia">Tecnologia</button>
           </div>
         </div>
@@ -1418,6 +1434,82 @@
               <li>Apoio a redes e protocolos abertos descentralizados.</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Diretrizes ampliadas -->
+    <section id="diretrizes" style="background: var(--navy-deep);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">06 / Diretrizes para o debate público</div>
+          <h2 class="section-title">Como os princípios se traduzem em propostas</h2>
+          <p class="section-desc">Uma plataforma política consistente precisa explicar não apenas o que pretende mudar, mas também os limites, os custos, os riscos e os critérios pelos quais suas propostas serão avaliadas.</p>
+        </div>
+
+        <div class="principle-list">
+          <article class="principle-item">
+            <h3>1. Estado de Direito</h3>
+            <p>As autoridades devem agir com base em competências legais delimitadas, regras públicas e decisões sujeitas a revisão independente.</p>
+            <ul><li>Devido processo legal e presunção de inocência.</li><li>Leis compreensíveis, estáveis e aplicadas sem privilégios.</li><li>Fiscalização de abusos e responsabilização por atos ilícitos.</li></ul>
+          </article>
+          <article class="principle-item">
+            <h3>2. Descentralização e federalismo</h3>
+            <p>Decisões devem ser tomadas tão perto quanto possível das pessoas afetadas, respeitando a Constituição e os direitos fundamentais.</p>
+            <ul><li>Mais autonomia administrativa local com contas abertas.</li><li>Comparação pública de custos e resultados entre entes federativos.</li><li>Cooperação voluntária entre municípios e comunidades.</li></ul>
+          </article>
+          <article class="principle-item">
+            <h3>3. Economia aberta e concorrência</h3>
+            <p>Mercados competitivos dependem de entrada acessível, contratos confiáveis e ausência de privilégios concedidos a grupos específicos.</p>
+            <ul><li>Simplificação tributária e regulatória.</li><li>Combate a cartéis, fraude e favorecimento estatal.</li><li>Privatizações avaliadas por transparência, concorrência e interesse público.</li></ul>
+          </article>
+          <article class="principle-item">
+            <h3>4. Liberdade civil e pluralismo</h3>
+            <p>O Estado não deve impor uma visão única de vida boa. Pessoas pacíficas devem poder expressar ideias, associar-se e discordar.</p>
+            <ul><li>Liberdade de expressão, imprensa, consciência e associação.</li><li>Proteção da privacidade e da comunicação criptografada.</li><li>Rejeição à violência política e à perseguição por opinião.</li></ul>
+          </article>
+          <article class="principle-item">
+            <h3>5. Responsabilidade fiscal</h3>
+            <p>Reduzir tributos de forma sustentável exige tornar visíveis as despesas, as obrigações existentes e os efeitos da transição.</p>
+            <ul><li>Orçamentos acessíveis em formato aberto.</li><li>Avaliação de custos recorrentes e passivos de longo prazo.</li><li>Metas verificáveis antes de anunciar economias.</li></ul>
+          </article>
+          <article class="principle-item">
+            <h3>6. Serviços essenciais e transição</h3>
+            <p>Reformas de grande alcance precisam prever continuidade dos serviços, proteção de direitos adquiridos legalmente e alternativas viáveis.</p>
+            <ul><li>Planos graduais, com etapas e prazos públicos.</li><li>Análise dos impactos sobre pessoas vulneráveis.</li><li>Indicadores para corrigir ou suspender medidas ineficazes.</li></ul>
+          </article>
+          <article class="principle-item">
+            <h3>7. Segurança, justiça e reparação</h3>
+            <p>Uma ordem de liberdade requer proteção contra agressão, fraude e violação de direitos, além de mecanismos imparciais para resolver disputas.</p>
+            <ul><li>Polícia sujeita a protocolos, auditoria e controle legal.</li><li>Justiça acessível, decisões fundamentadas e prazos razoáveis.</li><li>Mediação e arbitragem voluntárias quando adequadas e legalmente válidas.</li></ul>
+          </article>
+          <article class="principle-item">
+            <h3>8. Tecnologia e inovação</h3>
+            <p>A inovação deve poder florescer sem abandonar a responsabilidade por danos, a segurança dos usuários ou a transparência contratual.</p>
+            <ul><li>Interoperabilidade e padrões abertos.</li><li>Proteção contra fraude digital e uso indevido de dados.</li><li>Regras proporcionais ao risco e revisadas com evidências.</li></ul>
+          </article>
+          <article class="principle-item">
+            <h3>9. Meio ambiente e externalidades</h3>
+            <p>Danos ambientais que atinjam terceiros exigem formas claras de prevenção, comprovação, responsabilização e reparação.</p>
+            <ul><li>Monitoramento com dados públicos verificáveis.</li><li>Responsabilização por poluição e danos comprovados.</li><li>Incentivos à inovação e à conservação voluntária.</li></ul>
+          </article>
+        </div>
+
+        <div class="content-note">
+          <strong>Compromisso metodológico:</strong> cada proposta deve informar o problema que pretende resolver, a base jurídica, o custo estimado, os grupos afetados, os riscos previsíveis, os indicadores de resultado e a forma de revisão. As diretrizes acima são uma base de discussão, não uma descrição de políticas já implementadas.
+        </div>
+
+        <div class="section-header" style="margin-top:55px;">
+          <div class="section-kicker">Princípios, meios e limites</div>
+          <h2 class="section-title">O que uma proposta responsável precisa responder</h2>
+          <p class="section-desc">O objetivo de limitar o poder não elimina a necessidade de demonstrar como uma mudança funcionaria na prática.</p>
+        </div>
+        <div class="roadmap-grid">
+          <article class="step-card"><span class="roadmap-number">01</span><h3>Definir o problema</h3><p>Apresentar dados, contexto e evidências em vez de partir apenas de slogans ou exemplos isolados.</p></article>
+          <article class="step-card"><span class="roadmap-number">02</span><h3>Comparar alternativas</h3><p>Considerar soluções privadas, comunitárias, municipais e nacionais, incluindo a opção de não intervir.</p></article>
+          <article class="step-card"><span class="roadmap-number">03</span><h3>Medir custos e riscos</h3><p>Explicitar quem paga, quem se beneficia, quais direitos podem ser afetados e quais efeitos são incertos.</p></article>
+          <article class="step-card"><span class="roadmap-number">04</span><h3>Prever revisão</h3><p>Definir metas, auditoria independente, publicação de resultados e critérios para corrigir ou encerrar a medida.</p></article>
         </div>
       </div>
     </section>
