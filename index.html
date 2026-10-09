@@ -155,10 +155,12 @@
     }
 
     .brand-logo-img {
-      width: 44px;
-      height: 44px;
-      object-fit: contain;
-      filter: drop-shadow(0 0 8px var(--gold-glow));
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 0 10px var(--gold-glow);
     }
 
     .nav-links {
@@ -879,7 +881,7 @@
   <header class="top-header">
     <div class="container nav-bar">
       <a href="#inicio" class="brand-logo">
-        <img src="Emblema PBALM com Animais Heráldicos.png" alt="Emblema PBALM" class="brand-logo-img">
+        <img src="logo.jpg" alt="PBALM Logo" class="brand-logo-img">
         <span>PBALM</span>
       </a>
 
@@ -1436,10 +1438,13 @@
 
   <footer>
     <div class="container footer-grid">
-      <div>
-        <h3 style="color: var(--gold-primary); margin-bottom: 8px;">PBALM</h3>
-        <p>Partido Brasileiro da Autonomia Libertária Minarquista</p>
-        <p style="font-size: 0.8rem; margin-top: 10px; color: var(--text-dim);">Plataforma conceitual independente de estudos e debate político.</p>
+      <div style="display: flex; gap: 15px; align-items: flex-start;">
+        <img src="logo.jpg" alt="Logo PBALM" style="width: 54px; height: 54px; border-radius: var(--radius-md); border: 1px solid var(--border-color); object-fit: cover;">
+        <div>
+          <h3 style="color: var(--gold-primary); margin-bottom: 4px;">PBALM</h3>
+          <p>Partido Brasileiro da Autonomia Libertária Minarquista</p>
+          <p style="font-size: 0.8rem; margin-top: 6px; color: var(--text-dim);">Plataforma conceitual independente de estudos e debate político.</p>
+        </div>
       </div>
       <div>
         <p>© <span id="year-copy"></span> PBALM • Menos Estado. Mais Liberdade.</p>
