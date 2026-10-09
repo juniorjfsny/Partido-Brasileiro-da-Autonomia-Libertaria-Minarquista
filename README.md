@@ -9,3 +9,8 @@ Presidente do Partido : Nedir da Silva França Júnior.
 # PBALM
 
 contato:<junior.jfsn@yahoo.com>
+
+```
+git config user.name "juniorjfsny"
+git config user.email "junior.jfsn@yahoo.com"
+```
