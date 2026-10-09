@@ -1,89 +1,1630 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="PBALM — projeto conceitual sobre autonomia libertária, minarquismo, liberalismo clássico e anarcocapitalismo">
-<title>PBALM | Partido Brasileiro da Autonomia Libertária Minarquista</title>
-<style>
-:root{--navy:#101d32;--navy2:#1b304c;--gold:#d6b568;--cream:#f7f5ef;--ink:#182230;--muted:#637184;--line:#dce2e8;--green:#426c59}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:85px}body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}.top{position:sticky;top:0;background:#101d32f5;color:#fff;z-index:5;border-bottom:1px solid #d6b56866}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:900;letter-spacing:.08em;text-decoration:none}.brand b{color:var(--gold);border:2px solid var(--gold);border-radius:50%;padding:7px 10px;margin-right:9px}.links{display:flex;gap:17px;flex-wrap:wrap}.links a{text-decoration:none;font-size:.88rem;color:#e5eaf1}.links a:hover{color:var(--gold)}.menu{display:none}.notice{background:#fff2cf;padding:9px 0;font-size:.85rem;color:#59471e}.hero{background:radial-gradient(circle at 80% 15%,#304867,transparent 34%),linear-gradient(130deg,var(--navy),#182b43);color:white;padding:80px 0}.heroGrid{display:grid;grid-template-columns:1.3fr .7fr;gap:38px;align-items:center}.eyebrow,.kicker{font-size:.75rem;text-transform:uppercase;letter-spacing:.16em;font-weight:900;color:var(--gold)}h1{font-size:clamp(2.6rem,6vw,5rem);line-height:1.03;letter-spacing:-.04em;margin:15px 0}h1 span{color:var(--gold)}.hero p{max-width:720px;color:#d4deea;font-size:1.08rem}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;padding:11px 17px;border-radius:10px;text-decoration:none;font-weight:800;border:1px solid #7d8ba0}.gold{background:var(--gold);color:var(--navy);border-color:var(--gold)}.seal{width:min(270px,100%);aspect-ratio:1;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;margin:auto;box-shadow:0 0 0 14px #d6b56812,0 0 0 28px #d6b56808}.seal span{width:55%;height:55%;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:2.5rem;font-weight:900}.seal small{font-size:.6rem;display:block;letter-spacing:.1em}.caption{font-size:.78rem!important;text-align:center;color:#aeb9c8!important}.section{padding:72px 0}.white{background:#fff}.dark{background:var(--navy);color:white}.head{max-width:760px;margin-bottom:30px}.head h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.1;letter-spacing:-.035em;margin:8px 0 14px}.head p{color:var(--muted)}.dark .head p{color:#c6d0df}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{padding:23px;background:white;border:1px solid var(--line);border-radius:17px;box-shadow:0 7px 24px #101d3208}.dark .card{background:var(--navy2);border-color:#34465d}.card h3{margin:8px 0}.card p,.card li{color:var(--muted)}.dark .card p,.dark .card li{color:#d0d8e4}.icon{font-size:1.5rem}.pill{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-size:.75rem;color:var(--green);font-weight:800}.split{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}.callout{padding:23px;border-left:4px solid var(--gold);background:#f0f2f5;border-radius:0 14px 14px 0}.quote{font-size:1.4rem;font-weight:850;line-height:1.4;color:var(--navy)}.dark .quote{color:var(--gold)}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.tab{border:1px solid var(--line);background:white;padding:9px 13px;border-radius:99px;cursor:pointer;font-weight:800}.tab[aria-selected=true]{background:var(--gold);border-color:var(--gold)}.panel{background:white;color:var(--ink);padding:26px;border-radius:17px}.panel p{color:var(--muted)}.tablewrap{overflow-x:auto;background:white;border-radius:13px;border:1px solid var(--line)}table{width:100%;border-collapse:collapse;min-width:580px}th,td{text-align:left;padding:13px;border-bottom:1px solid var(--line);vertical-align:top}th{background:var(--navy);color:white}tr:last-child td{border:0}.bar{display:grid;grid-template-columns:155px 1fr 40px;gap:12px;align-items:center;margin:16px 0}.track{height:12px;background:#e8edf0;border-radius:20px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,var(--green),var(--gold));width:var(--w)}.roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{background:white;border-top:4px solid var(--gold);border-radius:0 0 14px 14px;padding:20px}.step strong{color:var(--green)}.step p{font-size:.9rem;color:var(--muted)}details{background:white;border:1px solid var(--line);padding:16px 19px;border-radius:12px;margin:10px 0}summary{cursor:pointer;font-weight:850}details p{color:var(--muted)}.refs li{padding:5px 0;overflow-wrap:anywhere}.refs a{color:var(--green)}.cta{padding:30px;border-radius:20px;background:#f0dfb5;display:flex;justify-content:space-between;align-items:center;gap:20px}.cta h2{margin:0;color:var(--navy)}footer{background:#0b1423;color:#c7d0dc;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:25px}.small{font-size:.82rem;color:var(--muted)}.dark .small{color:#bac5d4}#up{position:fixed;right:18px;bottom:18px;border:0;background:var(--gold);color:var(--navy);font-size:1.3rem;font-weight:900;border-radius:50%;width:44px;height:44px;display:none;cursor:pointer}#up.show{display:block}
-@media(max-width:820px){.heroGrid,.split{grid-template-columns:1fr}.seal{width:200px}.grid{grid-template-columns:repeat(2,1fr)}.roadmap{grid-template-columns:repeat(2,1fr)}.links{display:none;position:absolute;top:70px;left:0;right:0;background:var(--navy);padding:20px;flex-direction:column}.links.open{display:flex}.menu{display:block;background:transparent;color:white;border:1px solid #68778c;border-radius:8px;padding:8px}.hero{padding:55px 0}}@media(max-width:560px){.grid,.roadmap{grid-template-columns:1fr}.section{padding:52px 0}.bar{grid-template-columns:105px 1fr 35px;gap:8px}.cta,.foot{display:block}.cta .btn{margin-top:18px}.brand{font-size:.9rem}}@media print{.top,.actions,.menu,#up{display:none!important}.section{padding:25px 0}.hero{padding:30px 0}}
-</style></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PBALM — Projeto político conceitual sobre autonomia libertária, minarquismo, liberalismo clássico e anarcocapitalismo no Brasil.">
+  <meta name="theme-color" content="#0F172A">
+  <title>PBALM | Partido Brasileiro da Autonomia Libertária Minarquista</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Dark Theme (Default) */
+      --bg-main: #0B1120;
+      --bg-surface: #131D33;
+      --bg-card: #1C2945;
+      --bg-glass: rgba(19, 29, 51, 0.75);
+      --border-color: rgba(214, 181, 104, 0.18);
+      --border-hover: rgba(243, 208, 104, 0.4);
+      --text-main: #F1F5F9;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      
+      --gold-primary: #E5C158;
+      --gold-light: #F7E49A;
+      --gold-glow: rgba(229, 193, 88, 0.15);
+      --teal-accent: #2DD4BF;
+      --emerald-accent: #34D399;
+      --navy-deep: #070B14;
+      
+      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.2);
+      --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.35);
+      --shadow-glow: 0 0 25px rgba(229, 193, 88, 0.12);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    [data-theme="light"] {
+      --bg-main: #F8FAFC;
+      --bg-surface: #FFFFFF;
+      --bg-card: #F1F5F9;
+      --bg-glass: rgba(255, 255, 255, 0.85);
+      --border-color: rgba(15, 23, 42, 0.1);
+      --border-hover: rgba(180, 140, 40, 0.5);
+      --text-main: #0F172A;
+      --text-muted: #475569;
+      --text-dim: #64748B;
+      
+      --gold-primary: #B8860B;
+      --gold-light: #D4AF37;
+      --gold-glow: rgba(184, 134, 11, 0.1);
+      --teal-accent: #0D9488;
+      --emerald-accent: #059669;
+      --navy-deep: #F1F5F9;
+      
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-glow: 0 0 20px rgba(184, 134, 11, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.7;
+      overflow-x: hidden;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    h1, h2, h3, h4, h5, h6, .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1200px, 92%);
+      margin: 0 auto;
+    }
+
+    /* --- Notice Banner --- */
+    .disclaimer-banner {
+      background: linear-gradient(90deg, #1E293B, #0F172A);
+      border-bottom: 1px solid rgba(229, 193, 88, 0.2);
+      padding: 10px 0;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    .disclaimer-banner strong {
+      color: var(--gold-primary);
+    }
+
+    /* --- Header & Navbar --- */
+    .top-header {
+      position: sticky;
+      top: 0;
+      background: var(--bg-glass);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      z-index: 1000;
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      color: var(--text-main);
+    }
+
+    .brand-logo .symbol {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-primary), #B8860B);
+      color: #0F172A;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      font-size: 1.1rem;
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--gold-primary);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .theme-toggle-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+    .theme-toggle-btn:hover {
+      border-color: var(--gold-primary);
+    }
+
+    .menu-mobile-btn {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 1.2rem;
+    }
+
+    /* --- Hero Section --- */
+    .hero-section {
+      position: relative;
+      padding: 100px 0 80px;
+      background: radial-gradient(circle at 85% 20%, rgba(229, 193, 88, 0.08), transparent 45%),
+                  radial-gradient(circle at 15% 80%, rgba(45, 212, 191, 0.05), transparent 40%),
+                  var(--bg-main);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      background: var(--gold-glow);
+      border: 1px solid rgba(229, 193, 88, 0.3);
+      color: var(--gold-primary);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.8rem, 5.5vw, 4.8rem);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+    .hero-title span {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: var(--transition);
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-primary), #C89F35);
+      color: #0B1120;
+      box-shadow: 0 4px 20px rgba(229, 193, 88, 0.25);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(229, 193, 88, 0.35);
+    }
+
+    .btn-outline {
+      background: var(--bg-card);
+      border-color: var(--border-color);
+      color: var(--text-main);
+    }
+    .btn-outline:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+      transform: translateY(-2px);
+    }
+
+    .hero-badge-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .seal-emblem {
+      width: min(280px, 100%);
+      aspect-ratio: 1;
+      border: 2px solid var(--gold-primary);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      position: relative;
+      background: radial-gradient(circle, rgba(229,193,88,0.05) 0%, transparent 70%);
+      box-shadow: 0 0 0 12px rgba(229, 193, 88, 0.08), 0 0 0 24px rgba(229, 193, 88, 0.03);
+      animation: pulseGlow 4s infinite alternate ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 0 12px rgba(229, 193, 88, 0.08), 0 0 0 24px rgba(229, 193, 88, 0.03); }
+      100% { box-shadow: 0 0 0 18px rgba(229, 193, 88, 0.12), 0 0 0 32px rgba(229, 193, 88, 0.05); }
+    }
+
+    .seal-inner {
+      width: 70%;
+      height: 70%;
+      border: 1px dashed var(--gold-primary);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-primary);
+    }
+
+    .seal-inner .star {
+      font-size: 2.2rem;
+      line-height: 1;
+    }
+    .seal-inner .text {
+      font-size: 0.75rem;
+      font-weight: 900;
+      letter-spacing: 0.25em;
+      margin-top: 6px;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 40px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .stat-item h4 {
+      font-size: 1.8rem;
+      color: var(--gold-primary);
+    }
+
+    .stat-item p {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    /* --- Section General --- */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-weight: 800;
+      color: var(--gold-primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section-kicker::before {
+      content: '';
+      width: 18px;
+      height: 2px;
+      background: var(--gold-primary);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+    }
+
+    /* --- Grid Layouts --- */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: var(--transition);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--border-hover);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--gold-glow);
+      border: 1px solid rgba(229, 193, 88, 0.2);
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+      color: var(--text-main);
+    }
+
+    .card p, .card ul {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .card ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+    .card ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 8px;
+    }
+    .card ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--gold-primary);
+      font-size: 0.75rem;
+    }
+
+    .badge-pill {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      background: rgba(45, 212, 191, 0.1);
+      border: 1px solid rgba(45, 212, 191, 0.3);
+      color: var(--teal-accent);
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    /* --- Interactive Quiz Component --- */
+    .quiz-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .quiz-question {
+      margin-bottom: 25px;
+    }
+
+    .quiz-question h4 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: var(--text-main);
+    }
+
+    .quiz-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .quiz-option {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 14px 20px;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+    }
+
+    .quiz-option:hover, .quiz-option.selected {
+      border-color: var(--gold-primary);
+      background: var(--gold-glow);
+    }
+
+    .quiz-option input[type="radio"] {
+      accent-color: var(--gold-primary);
+    }
+
+    .quiz-result {
+      display: none;
+      margin-top: 30px;
+      padding: 25px;
+      border-radius: var(--radius-md);
+      background: var(--bg-card);
+      border: 1px solid var(--gold-primary);
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* --- Interactive Tabs (Correntes) --- */
+    .tabs-wrapper {
+      margin-top: 30px;
+    }
+
+    .tab-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    .tab-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 12px 22px;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .tab-btn:hover {
+      border-color: var(--gold-primary);
+      color: var(--text-main);
+    }
+
+    .tab-btn.active {
+      background: var(--gold-primary);
+      border-color: var(--gold-primary);
+      color: #0B1120;
+    }
+
+    .tab-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 35px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* --- Interactive Filter Bar --- */
+    .filter-bar {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 30px;
+      background: var(--bg-surface);
+      padding: 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-color);
+    }
+
+    .search-input {
+      flex: 1;
+      min-width: 240px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      padding: 10px 18px;
+      border-radius: var(--radius-full);
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+    }
+    .search-input:focus {
+      border-color: var(--gold-primary);
+    }
+
+    .filter-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .filter-chip.active, .filter-chip:hover {
+      background: var(--gold-glow);
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+
+    /* --- Comparison Table --- */
+    .table-container {
+      overflow-x: auto;
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-color);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 650px;
+    }
+
+    th, td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+      vertical-align: top;
+      font-size: 0.93rem;
+    }
+
+    th {
+      background: var(--bg-card);
+      color: var(--gold-primary);
+      font-weight: 800;
+    }
+
+    /* --- Progress Bars --- */
+    .eval-bar {
+      display: grid;
+      grid-template-columns: 180px 1fr 50px;
+      gap: 15px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .track {
+      height: 12px;
+      background: var(--bg-card);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+    }
+
+    .fill-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--teal-accent), var(--gold-primary));
+      border-radius: var(--radius-full);
+      transition: width 1s ease-in-out;
+    }
+
+    /* --- Roadmap Timeline --- */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .step-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-top: 4px solid var(--gold-primary);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .step-card span {
+      font-size: 0.8rem;
+      font-weight: 900;
+      color: var(--teal-accent);
+      letter-spacing: 0.1em;
+    }
+
+    /* --- Accordion FAQ --- */
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 20px;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 1.05rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      color: var(--gold-primary);
+      transition: var(--transition);
+    }
+
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+
+    .faq-item p {
+      padding: 0 20px 20px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* --- Callout Box --- */
+    .callout-box {
+      background: linear-gradient(135deg, var(--bg-surface), var(--bg-card));
+      border-left: 5px solid var(--gold-primary);
+      padding: 30px;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+      margin: 25px 0;
+    }
+
+    .quote-text {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    /* --- References --- */
+    .refs-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 16px;
+      list-style: none;
+    }
+
+    .refs-list li {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-color);
+      padding: 16px 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+    }
+
+    .refs-list a {
+      color: var(--teal-accent);
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .refs-list a:hover {
+      text-decoration: underline;
+    }
+
+    /* --- CTA Footer Banner --- */
+    .cta-banner {
+      background: linear-gradient(135deg, rgba(229, 193, 88, 0.15), rgba(45, 212, 191, 0.1));
+      border: 1px solid var(--gold-primary);
+      border-radius: var(--radius-lg);
+      padding: 45px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    footer {
+      background: var(--navy-deep);
+      border-top: 1px solid var(--border-color);
+      padding: 50px 0 30px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    #scroll-up-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--gold-primary);
+      color: #0B1120;
+      border: none;
+      font-size: 1.4rem;
+      font-weight: 900;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: var(--transition);
+      z-index: 99;
+    }
+    #scroll-up-btn:hover {
+      transform: translateY(-3px);
+    }
+    #scroll-up-btn.show {
+      display: flex;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .cta-banner {
+        flex-direction: column;
+        text-align: center;
+      }
+      .eval-bar {
+        grid-template-columns: 120px 1fr 45px;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        padding: 25px;
+        flex-direction: column;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .nav-links.open {
+        display: flex;
+      }
+      .menu-mobile-btn {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
 <body>
-<header class="top"><div class="wrap nav"><a class="brand" href="#inicio"><b>✦</b>PBALM</a><button class="menu" id="menu" aria-expanded="false">Menu ☰</button><nav class="links" id="links"><a href="#principios">Princípios</a><a href="#correntes">Correntes</a><a href="#programa">Programa</a><a href="#pautas">Novas pautas</a><a href="#governanca">Governança</a><a href="#referencias">Referências</a></nav></div></header>
-<div class="notice"><div class="wrap"><strong>Transparência:</strong> site conceitual independente; não representa partido registrado nem programa oficialmente aprovado.</div></div>
-<main>
-<section class="hero" id="inicio"><div class="wrap heroGrid"><div><div class="eyebrow">Projeto político • Brasil</div><h1>PBALM<br><span>Menos Estado.<br>Mais liberdade.</span></h1><p><strong>Partido Brasileiro da Autonomia Libertária Minarquista.</strong> Uma proposta de organização política inspirada no liberalismo clássico, no minarquismo, no libertarianismo e no anarcocapitalismo.</p><p>O eixo comum é a autonomia individual, a propriedade privada, a livre iniciativa, as liberdades civis, a cooperação voluntária e a limitação do poder coercitivo — reconhecendo as divergências entre as correntes.</p><div class="actions"><a class="btn gold" href="#manifesto">Conheça o manifesto ↓</a><a class="btn" href="#programa">Explorar o programa</a></div></div><div><div class="seal"><span>✦<small>LIBERDADE</small></span></div><p class="caption">Identidade visual ilustrativa, não oficial.</p></div></div></section>
-<section class="section" id="manifesto"><div class="wrap split"><div class="head"><div class="kicker">01 / Manifesto</div><h2>A pessoa antes do poder.</h2><p>O PBALM propõe uma sociedade na qual cada pessoa possa conduzir a própria vida, cooperar voluntariamente e buscar seus objetivos sem privilégios políticos ou coerção injustificada.</p></div><div class="callout"><p class="quote">“A liberdade de cada pessoa deve coexistir com os mesmos direitos para todas as outras.”</p><p>Defendemos regras gerais, instituições responsáveis, respeito aos contratos e proteção contra agressão, fraude e abuso de poder. Onde existir Estado, seus poderes devem ser justificados, limitados e fiscalizados; soluções voluntárias devem poder ser experimentadas e avaliadas.</p><p>Nem o mercado nem o Estado são infalíveis. Políticas devem ser avaliadas por incentivos, custos, direitos afetados, resultados e capacidade de corrigir erros.</p></div></div></section>
-<section class="section white" id="principios"><div class="wrap"><div class="head"><div class="kicker">02 / Fundamentos</div><h2>Princípios centrais</h2><p>Valores para orientar propostas, decisões internas e atuação pública.</p></div><div class="grid">
-<article class="card"><div class="icon">🧭</div><h3>Autonomia individual</h3><p>Liberdade para conduzir a própria vida, respeitando os direitos equivalentes dos demais.</p></article>
-<article class="card"><div class="icon">🔑</div><h3>Autopropriedade</h3><p>Autoridade moral primária sobre o próprio corpo e vida; suas implicações são objeto de debate filosófico.</p></article>
-<article class="card"><div class="icon">🏡</div><h3>Propriedade privada</h3><p>Segurança de posse, contratos e transferência legítima de bens, com mecanismos justos de resolução de disputas.</p></article>
-<article class="card"><div class="icon">⚖️</div><h3>Igualdade perante a lei</h3><p>Rejeição a privilégios arbitrários, favorecimento político e imunidade indevida à responsabilização.</p></article>
-<article class="card"><div class="icon">🕊️</div><h3>Liberdades civis</h3><p>Proteção da expressão, consciência, imprensa, associação, privacidade e escolhas pacíficas.</p></article>
-<article class="card"><div class="icon">🤝</div><h3>Cooperação voluntária</h3><p>Valorização de associações, mutualismo, filantropia, cooperativas e soluções concorrenciais transparentes.</p></article>
-<article class="card"><div class="icon">🏛️</div><h3>Poder limitado</h3><p>Competências delimitadas, fiscalização, transparência, devido processo e responsabilização de agentes públicos.</p></article>
-<article class="card"><div class="icon">📊</div><h3>Responsabilidade fiscal</h3><p>Propostas tributárias acompanhadas de custos, cenários, efeitos distributivos e plano de transição.</p></article>
-<article class="card"><div class="icon">🌱</div><h3>Aprendizagem</h3><p>Políticas com metas explícitas, avaliação e disposição para corrigir ou revogar medidas ineficazes.</p></article>
-</div></div></section>
-<section class="section dark" id="correntes"><div class="wrap"><div class="head"><div class="kicker">03 / Pluralidade filosófica</div><h2>Quatro correntes, um espaço de debate.</h2><p>Essas tradições compartilham algumas preocupações, mas não são sinônimas. Se reunidas, o partido deve explicitar consensos e divergências.</p></div><div class="tabs" role="tablist"><button class="tab" aria-selected="true" data-tab="classico">Liberal clássico</button><button class="tab" aria-selected="false" data-tab="minarquista">Minarquista</button><button class="tab" aria-selected="false" data-tab="libertario">Libertário</button><button class="tab" aria-selected="false" data-tab="ancap">Anarcocapitalista</button></div><div class="panel" id="panel" role="tabpanel" aria-live="polite"><span class="pill">Direitos e constitucionalismo</span><h3>Liberalismo clássico</h3><p>Enfatiza direitos individuais, Estado de Direito, tolerância, governo limitado e liberdade econômica. Há diferentes interpretações sobre a extensão das funções públicas.</p><p><strong>Questão orientadora:</strong> quais instituições protegem a liberdade sem concentrar poder arbitrário?</p></div></div></section>
-<section class="section" id="programa"><div class="wrap"><div class="head"><div class="kicker">04 / Programa proposto</div><h2>Liberdade aplicada às políticas públicas</h2><p>Linhas para discussão; exigem estudos de impacto, revisão jurídica e aprovação interna antes de se tornarem compromissos oficiais.</p></div><div class="grid">
-<article class="card"><span class="pill">Economia</span><h3>Livre iniciativa</h3><ul><li>Simplificar abertura de empresas.</li><li>Reduzir barreiras artificiais à entrada.</li><li>Rever subsídios e privilégios.</li><li>Avaliar privatizações com transparência e concorrência.</li></ul></article>
-<article class="card"><span class="pill">Tributos</span><h3>Reforma fiscal</h3><ul><li>Simplificar tributos e obrigações.</li><li>Publicar custos e cenários.</li><li>Avaliar despesas com dados.</li><li>Não prometer cortes sem plano fiscal coerente.</li></ul></article>
-<article class="card"><span class="pill">Instituições</span><h3>Estado limitado</h3><ul><li>Transparência orçamentária.</li><li>Combate à corrupção e abuso de autoridade.</li><li>Limites para poderes regulatórios.</li><li>Fiscalização independente.</li></ul></article>
-<article class="card"><span class="pill">Justiça</span><h3>Direitos e conflitos</h3><ul><li>Devido processo e presunção de inocência.</li><li>Mediação e arbitragem voluntárias quando adequadas.</li><li>Estudo de alternativas privadas com salvaguardas.</li><li>Responsabilização por fraude e agressão.</li></ul></article>
-<article class="card"><span class="pill">Cidadania</span><h3>Liberdades digitais</h3><ul><li>Privacidade e proteção de dados.</li><li>Liberdade de expressão e associação.</li><li>Limites à vigilância desproporcional.</li><li>Respeito às escolhas pacíficas.</li></ul></article>
-<article class="card"><span class="pill">Comunidades</span><h3>Descentralização</h3><ul><li>Autonomia local com garantias de direitos.</li><li>Cooperativas e associações voluntárias.</li><li>Filantropia e ajuda mútua.</li><li>Experimentos locais avaliados.</li></ul></article>
-<article class="card"><span class="pill">Educação</span><h3>Pluralidade e escolha</h3><ul><li>Autonomia pedagógica.</li><li>Informação comparável sobre qualidade.</li><li>Redução de barreiras desnecessárias.</li><li>Avaliação de acesso e custos de transição.</li></ul></article>
-<article class="card"><span class="pill">Saúde</span><h3>Inovação e escolha</h3><ul><li>Incentivos à inovação e telemedicina.</li><li>Transparência de preços.</li><li>Estudo de modelos privados e mutualistas.</li><li>Monitoramento de acesso e qualidade.</li></ul></article>
-<article class="card"><span class="pill">Política externa</span><h3>Paz e comércio</h3><ul><li>Diplomacia e cooperação voluntária.</li><li>Comércio internacional aberto.</li><li>Oposição a guerras de agressão.</li><li>Defesa compatível com limites aprovados.</li></ul></article>
-</div></div></section>
-<section class="section white" id="estado"><div class="wrap split"><div class="head"><div class="kicker">05 / Debate essencial</div><h2>Estado mínimo ou sociedade sem Estado?</h2><p>Esta é a principal divergência filosófica a tratar com honestidade.</p><div class="callout"><p class="quote">O consenso deve ser real, não fabricado.</p><p>Minarquistas consideram legítimo um Estado restrito a funções essenciais, como proteção contra agressão, justiça e defesa. Anarcocapitalistas defendem substituir o Estado por arranjos voluntários e concorrenciais. Liberais clássicos e libertários ocupam posições variadas.</p></div></div><div class="tablewrap"><table><thead><tr><th>Modelo</th><th>Questão central</th></tr></thead><tbody><tr><td><b>Estado mínimo</b></td><td>Quais funções são essenciais e como limitá-las?</td></tr><tr><td><b>Transição gradual</b></td><td>Quais reformas ampliam opções voluntárias sem criar vácuos institucionais?</td></tr><tr><td><b>Pluralismo interno</b></td><td>Como diferenciar teses de alas do programa aprovado?</td></tr><tr><td><b>Sociedade sem Estado</b></td><td>Como lidar com acesso, responsabilização e conflitos entre prestadores?</td></tr></tbody></table></div></div></section>
-<section class="section" id="avaliacao"><div class="wrap split"><div class="head"><div class="kicker">06 / Método</div><h2>Como avaliar uma proposta</h2><p>Nem o mercado nem o Estado são infalíveis. Cada política deve declarar objetivos, custos, alternativas e riscos.</p></div><div><div class="bar"><span>Liberdades civis</span><div class="track"><div class="fill" style="--w:100%"></div></div><b>5/5</b></div><div class="bar"><span>Transparência</span><div class="track"><div class="fill" style="--w:100%"></div></div><b>5/5</b></div><div class="bar"><span>Concorrência</span><div class="track"><div class="fill" style="--w:80%"></div></div><b>4/5</b></div><div class="bar"><span>Impacto fiscal</span><div class="track"><div class="fill" style="--w:80%"></div></div><b>4/5</b></div><div class="bar"><span>Transição e acesso</span><div class="track"><div class="fill" style="--w:80%"></div></div><b>4/5</b></div><p class="small">Escores demonstrativos, não pesquisa ou pontuação oficial.</p></div></div></section>
-<section class="section white" id="pautas"><div class="wrap"><div class="head"><div class="kicker">07 / Contextos libertários adicionais</div><h2>Temas para aprofundar</h2><p>Uma agenda contemporânea considera tecnologia, novas formas de organização e riscos de concentração de poder público e privado.</p></div><div class="grid">
-<article class="card"><div class="icon">₿</div><h3>Liberdade monetária</h3><p>Debater concorrência monetária, pagamentos digitais e criptoativos com transparência e prevenção a fraudes, sem prometer ganhos financeiros.</p></article>
-<article class="card"><div class="icon">🔐</div><h3>Privacidade por padrão</h3><p>Minimização de coleta de dados, segurança digital, transparência algorítmica e limites à vigilância pública e comercial.</p></article>
-<article class="card"><div class="icon">🧠</div><h3>Inteligência artificial</h3><p>Regras proporcionais ao risco, concorrência, responsabilização por danos e espaço para experimentação.</p></article>
-<article class="card"><div class="icon">🏙️</div><h3>Moradia e urbanismo</h3><p>Revisar zoneamento e licenças que restrinjam a oferta, considerando segurança, infraestrutura e impactos a terceiros.</p></article>
-<article class="card"><div class="icon">🌳</div><h3>Meio ambiente</h3><p>Comparar direitos de propriedade, reparação de danos, instrumentos de mercado e regulação conforme cada problema.</p></article>
-<article class="card"><div class="icon">🛠️</div><h3>Trabalho e autonomia</h3><p>Facilitar contratação e empreendedorismo, respeitando consentimento, contratos e reparação em casos de abuso.</p></article>
-<article class="card"><div class="icon">🧩</div><h3>Ajuda mútua</h3><p>Fortalecer redes comunitárias, cooperativas e filantropia sem presumir que todos tenham igual acesso ou capacidade.</p></article>
-<article class="card"><div class="icon">🌐</div><h3>Comércio e circulação</h3><p>Examinar barreiras à mobilidade, à imigração, ao comércio e à cooperação em debate jurídico transparente.</p></article>
-<article class="card"><div class="icon">🗳️</div><h3>Democracia interna</h3><p>Mandatos limitados, atas, prestação de contas e possibilidade de contestar dirigentes sem retaliação.</p></article>
-</div></div></section>
-<section class="section dark" id="governanca"><div class="wrap"><div class="head"><div class="kicker">08 / Integridade</div><h2>Praticar internamente o que se defende.</h2><p>Uma organização que pede limites ao poder deve limitar o próprio poder.</p></div><div class="grid">
-<article class="card"><h3>Decisão democrática</h3><p>Convenções, regras claras de votação, registro de decisões e mecanismos de recurso.</p></article><article class="card"><h3>Transparência financeira</h3><p>Contas claras, auditoria, conformidade eleitoral e prevenção de conflitos de interesse.</p></article><article class="card"><h3>Liberdade de crítica</h3><p>Proteção ao dissenso pacífico e espaço para debates entre alas.</p></article><article class="card"><h3>Mandatos e limites</h3><p>Competências definidas, duração de mandatos e prevenção à concentração personalista.</p></article><article class="card"><h3>Ética e responsabilização</h3><p>Código de conduta, direito de defesa, apuração imparcial e medidas corretivas.</p></article><article class="card"><h3>Dados e privacidade</h3><p>Proteção de dados de membros, segurança dos sistemas e coleta apenas do necessário.</p></article>
-</div></div></section>
-<section class="section" id="roteiro"><div class="wrap"><div class="head"><div class="kicker">09 / Da ideia à organização</div><h2>Roteiro de desenvolvimento</h2><p>Sequência sugerida. Prazos e requisitos legais devem ser verificados em fontes oficiais atualizadas.</p></div><div class="roadmap"><article class="step"><strong>ETAPA 01</strong><h3>Estudo e consulta</h3><p>Reunir interessados, estudar correntes, ouvir críticas e registrar divergências.</p></article><article class="step"><strong>ETAPA 02</strong><h3>Programa e estatuto</h3><p>Redigir princípios, regras de governança, código de ética e processo de aprovação.</p></article><article class="step"><strong>ETAPA 03</strong><h3>Organização cívica</h3><p>Promover debates, educação política, projetos comunitários e transparência.</p></article><article class="step"><strong>ETAPA 04</strong><h3>Revisão jurídica</h3><p>Consultar TSE e profissionais qualificados antes de qualquer iniciativa de registro.</p></article></div><div class="callout" style="margin-top:22px"><b>Importante:</b> criar uma página, associação ou movimento não equivale a registrar um partido apto a disputar eleições. Não se deve anunciar disponibilidade da sigla sem confirmação oficial.</div></div></section>
-<section class="section white" id="faq"><div class="wrap"><div class="head"><div class="kicker">10 / Perguntas frequentes</div><h2>Questões difíceis, respostas honestas</h2></div>
-<details><summary>O PBALM seria um partido anarcocapitalista?</summary><p>O nome destaca autonomia libertária e minarquismo. Para incluir anarcocapitalistas, é necessário definir se essa corrente será uma ala filosófica, uma posição individual ou um objetivo oficial de longo prazo.</p></details>
-<details><summary>Mercado livre significa abolir todas as regras?</summary><p>Não necessariamente. É preciso distinguir regras que protegem direitos e responsabilização daquelas que criam barreiras artificiais, privilégios ou custos desproporcionais.</p></details>
-<details><summary>Como reduzir impostos sem comprometer o orçamento?</summary><p>Com diagnóstico fiscal, avaliação de despesas, cenários de receita e gasto, prioridades explícitas e plano de transição.</p></details>
-<details><summary>Como lidar com divergências internas?</summary><p>Por regras transparentes, liberdade de debate, votação legítima, publicação das posições aprovadas e espaço para teses minoritárias.</p></details>
-<details><summary>O nome e a sigla estão disponíveis para registro?</summary><p>Este site não confirma disponibilidade. Verifique no Tribunal Superior Eleitoral e com assessoria jurídica.</p></details>
-</div></section>
-<section class="section" id="referencias"><div class="wrap split"><div class="head"><div class="kicker">11 / Leituras e fontes</div><h2>Referências para estudo</h2><p>Obras filosóficas e fontes institucionais. A inclusão não significa endosso integral de suas conclusões.</p></div><ol class="refs">
-<li><b>Locke, John.</b> <i>Second Treatise of Government</i> (1689). <a href="https://www.gutenberg.org/ebooks/7370" target="_blank" rel="noopener">Project Gutenberg</a>.</li>
-<li><b>Smith, Adam.</b> <i>The Wealth of Nations</i> (1776). <a href="https://www.gutenberg.org/ebooks/3300" target="_blank" rel="noopener">Project Gutenberg</a>.</li>
-<li><b>Hayek, F. A.</b> <i>The Constitution of Liberty</i> (1960). Liberdade, regras gerais e limites ao poder.</li>
-<li><b>Nozick, Robert.</b> <i>Anarchy, State, and Utopia</i> (1974). Discussão sobre o Estado mínimo.</li>
-<li><b>Rothbard, Murray N.</b> <i>For a New Liberty: The Libertarian Manifesto</i> (1973). Tradição anarcocapitalista.</li>
-<li><b>Friedman, David D.</b> <i>The Machinery of Freedom</i> (1973; edições posteriores). Ordem jurídica concorrencial.</li>
-<li><b>Mises, Ludwig von.</b> <i>Liberalism: The Classical Tradition</i> (1927). Liberalismo clássico e cooperação social.</li>
-<li><b>Tribunal Superior Eleitoral.</b> <a href="https://www.tse.jus.br/" target="_blank" rel="noopener">Portal oficial do TSE</a> para legislação e procedimentos eleitorais.</li>
-<li><b>Constituição Federal de 1988.</b> <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Texto no portal do Planalto</a>.</li>
-</ol></div></section>
-<section class="section"><div class="wrap cta"><div><h2>Uma sociedade mais livre começa com um debate mais sério.</h2><p>Revise, discuta, cite fontes e transforme princípios em propostas transparentes e avaliáveis.</p></div><a class="btn gold" href="#inicio">Voltar ao início ↑</a></div></section>
-</main><footer><div class="wrap foot"><div><b>PBALM</b><p>Partido Brasileiro da Autonomia Libertária Minarquista</p><p class="small">Projeto conceitual independente. Não é aconselhamento jurídico nem confirmação de registro.</p></div><div><b>Menos Estado. Mais liberdade.</b><p class="small">© <span id="year"></span> • Versão conceitual</p></div></div></footer>
-<button id="up" aria-label="Voltar ao topo">↑</button>
-<script>
-const contents={
-classico:["Direitos e constitucionalismo","Liberalismo clássico","Enfatiza direitos individuais, Estado de Direito, tolerância, governo limitado e liberdade econômica. Há diferentes interpretações sobre a extensão das funções públicas.","Quais instituições protegem a liberdade sem concentrar poder arbitrário?"],
-minarquista:["Estado mínimo","Minarquismo","Defende um Estado restrito a funções essenciais, frequentemente associadas à proteção contra agressão, justiça e defesa. O debate inclui financiamento, limites institucionais e prestação de contas.","Como definir as funções mínimas e impedir que se expandam sem controle?"],
-libertario:["Princípio da não agressão","Libertarianismo","Uma família plural de ideias que prioriza liberdade individual, propriedade, contratos voluntários e restrição da coerção. Libertários divergem sobre Estado e políticas públicas.","Como proteger direitos e resolver conflitos com o menor grau de coerção injustificada?"],
-ancap:["Ordem voluntária","Anarcocapitalismo","Defende uma sociedade sem Estado, com serviços e mecanismos de resolução de conflitos organizados por arranjos voluntários e concorrenciais. Persistem questões sobre acesso, responsabilização e conflitos entre prestadores.","Como assegurar justiça e segurança sem monopólio estatal nem poder privado arbitrário?"]
-};
-const tabs=[...document.querySelectorAll("[data-tab]")],panel=document.getElementById("panel");
-tabs.forEach(b=>b.addEventListener("click",()=>{tabs.forEach(t=>t.setAttribute("aria-selected",String(t===b)));let d=contents[b.dataset.tab];panel.innerHTML=`<span class="pill">${d[0]}</span><h3>${d[1]}</h3><p>${d[2]}</p><p><b>Questão orientadora:</b> ${d[3]}</p>`}));
-const menu=document.getElementById("menu"),links=document.getElementById("links");menu.addEventListener("click",()=>{let o=links.classList.toggle("open");menu.setAttribute("aria-expanded",String(o))});links.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{links.classList.remove("open");menu.setAttribute("aria-expanded","false")}));
-const up=document.getElementById("up");window.addEventListener("scroll",()=>up.classList.toggle("show",scrollY>500));up.addEventListener("click",()=>scrollTo({top:0,behavior:"smooth"}));document.getElementById("year").textContent=new Date().getFullYear();
-</script></body></html>
+
+  <!-- Disclaimer Banner -->
+  <div class="disclaimer-banner">
+    <div class="container">
+      <strong>Transparência & Conformidade:</strong> Projeto conceitual e filosófico independente. Não constitui partido político registrado perante o TSE nem programa oficial homologado.
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="top-header">
+    <div class="container nav-bar">
+      <a href="#inicio" class="brand-logo">
+        <span class="symbol">✦</span>
+        <span>PBALM</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#manifesto">Manifesto</a>
+        <a href="#principios">Princípios</a>
+        <a href="#correntes">Correntes</a>
+        <a href="#simulador">Simulador</a>
+        <a href="#programa">Programa</a>
+        <a href="#governanca">Governança</a>
+        <a href="#faq">FAQ</a>
+        <a href="#referencias">Referências</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" title="Alternar tema claro/escuro">
+          <span id="theme-icon">🌙</span>
+          <span id="theme-text" style="font-size:0.8rem; font-weight:700;">Modo</span>
+        </button>
+        <button class="menu-mobile-btn" id="menu-btn" aria-label="Abrir menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="hero-tag">✦ Projeto Político Conceitual • Brasil</span>
+          <h1 class="hero-title">PBALM<br><span>Menos Estado.<br>Mais Liberdade.</span></h1>
+          <p class="hero-desc">
+            <strong>Partido Brasileiro da Autonomia Libertária Minarquista.</strong> Uma proposta de convergência política e filosófica inspirada no liberalismo clássico, no minarquismo, no libertarianismo e no anarcocapitalismo.
+          </p>
+          <div class="hero-buttons">
+            <a href="#simulador" class="btn btn-gold">Teste seu Alinhamento ✦</a>
+            <a href="#programa" class="btn btn-outline">Explorar Programa</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>4</h4>
+              <p>Correntes Filosóficas</p>
+            </div>
+            <div class="stat-item">
+              <h4>9</h4>
+              <p>Princípios Centrais</p>
+            </div>
+            <div class="stat-item">
+              <h4>100%</h4>
+              <p>Foco na Autonomia</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-badge-container">
+          <div class="seal-emblem">
+            <div class="seal-inner">
+              <span class="star">✦</span>
+              <span class="text">LIBERDADE</span>
+            </div>
+          </div>
+          <p style="font-size:0.8rem; color: var(--text-dim);">Símbolo conceitual de autonomia e voluntarismo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Manifesto Section -->
+    <section id="manifesto">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">01 / Manifesto Fundamental</div>
+          <h2 class="section-title">A pessoa antes do poder.</h2>
+          <p class="section-desc">Propondo uma sociedade baseada em escolhas voluntárias, respeito aos contratos e soberania individual.</p>
+        </div>
+
+        <div class="callout-box">
+          <p class="quote-text">“A liberdade de cada pessoa deve coexistir harmonicamente com os mesmos direitos inalienáveis para todas as outras.”</p>
+          <p style="color: var(--text-muted);">
+            Defendemos regras previsíveis, responsabilização de agentes públicos e privados, e a integral proteção contra qualquer forma de agressão, fraude ou arbítrio estatal. Onde houver Estado, suas competências devem ser estritamente justificadas, delimitadas e submetidas a rigoroso controle social.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Princípios Centrais -->
+    <section id="principios" style="background: var(--navy-deep);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">02 / Pilares Ideológicos</div>
+          <h2 class="section-title">Princípios Centrais</h2>
+          <p class="section-desc">Valores éticos e práticos que norteiam propostas e governança.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card-icon">🧭</div>
+            <h3>Autonomia Individual</h3>
+            <p>Soberania sobre as escolhas de vida, assumindo seus custos e consequências sem imposições compulsórias.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🔑</div>
+            <h3>Autopropriedade</h3>
+            <p>Direito primário moral e jurídico sobre o próprio corpo, mente e os frutos legítimos do seu trabalho.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🏡</div>
+            <h3>Propriedade Privada</h3>
+            <p>Segurança jurídica inviolável para posse de bens, validade de contratos e livre transferência patrimonial.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">⚖️</div>
+            <h3>Igualdade perante a Lei</h3>
+            <p>Fim de privilégios corporativos, imunidades políticas indevidas ou favorecimentos burocráticos.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🕊️</div>
+            <h3>Liberdades Civis</h3>
+            <p>Garantia irrestrita de expressão, imprensa, associação, consciência, privacidade e escolhas pacíficas.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🤝</div>
+            <h3>Cooperação Voluntária</h3>
+            <p>Estímulo a mutualismo, filantropia, cooperativas e soluções concorrenciais descentralizadas.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🏛️</div>
+            <h3>Poder Estatal Limitado</h3>
+            <p>Transparência total, devido processo legal, accountability e redução gradual da coerção pública.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">📊</div>
+            <h3>Responsabilidade Fiscal</h3>
+            <p>Toda redução de impostos deve vir acompanhada de cortes efetivos de despesas e plano de transição.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon">🌱</div>
+            <h3>Melhoria Contínua</h3>
+            <p>Políticas públicas submetidas a metas claras, auditorias e revogação imediata em caso de ineficácia.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Correntes Filosóficas -->
+    <section id="correntes">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">03 / Pluralismo Filosófico</div>
+          <h2 class="section-title">Quatro Correntes, Um Diálogo</h2>
+          <p class="section-desc">Respeitando as nuances teóricas de cada tradição liberal e libertária.</p>
+        </div>
+
+        <div class="tabs-wrapper">
+          <div class="tab-buttons" role="tablist">
+            <button class="tab-btn active" data-tab="classico">Liberalismo Clássico</button>
+            <button class="tab-btn" data-tab="minarquista">Minarquismo</button>
+            <button class="tab-btn" data-tab="libertario">Libertarianismo</button>
+            <button class="tab-btn" data-tab="ancap">Anarcocapitalismo</button>
+          </div>
+
+          <div class="tab-panel" id="tab-content">
+            <!-- Dynamic Tab Content loaded by JS -->
+          </div>
+        </div>
+
+        <!-- Matriz Comparativa -->
+        <h3 style="margin: 40px 0 20px; font-size: 1.5rem;">Matriz Comparativa das Correntes</h3>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Dimensão</th>
+                <th>Liberal Clássico</th>
+                <th>Minarquista</th>
+                <th>Libertário</th>
+                <th>Anarcocapitalista</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Papel do Estado</strong></td>
+                <td>Governo limitado, infraestrutura básica e direitos.</td>
+                <td>Estado Mínimo (Polícia, Justiça e Defesa apenas).</td>
+                <td>Cético quanto ao Estado; foco na Não-Agressão.</td>
+                <td>Abolição total do Estado coercitivo.</td>
+              </tr>
+              <tr>
+                <td><strong>Segurança & Justiça</strong></td>
+                <td>Monopólio público com supervisão imparcial.</td>
+                <td>Função exclusiva e intransferível do Estado.</td>
+                <td>Prefere arbitragem voluntária e segurança privada.</td>
+                <td>Tribunais privados em concorrência livre.</td>
+              </tr>
+              <tr>
+                <td><strong>Tributação</strong></td>
+                <td>Impostos moderados e previsíveis.</td>
+                <td>Minimizada ao estritamente essencial.</td>
+                <td>Considerada coerção; apoia doações voluntárias.</td>
+                <td>Equiparada a roubo compulsório.</td>
+              </tr>
+              <tr>
+                <td><strong>Moeda & Mercado</strong></td>
+                <td>Banco central independente e moeda livre.</td>
+                <td>Concorrência bancária e padrão-ouro/moeda forte.</td>
+                <td>Livre escolha monetária (criptoativos/ouro).</td>
+                <td>Descentralização absoluta sem regulação estatal.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Quiz / Alinhamento -->
+    <section id="simulador" style="background: var(--navy-deep);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">04 / Ferramenta Interativa</div>
+          <h2 class="section-title">Simulador de Alinhamento Libertário</h2>
+          <p class="section-desc">Responda a 4 perguntas simples para identificar com qual corrente suas visões políticas mais convergem.</p>
+        </div>
+
+        <div class="quiz-box">
+          <form id="quiz-form">
+            <div class="quiz-question">
+              <h4>1. Qual deve ser o papel primário das forças de segurança e tribunais?</h4>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="classico" required> Devem ser estatais, garantindo a ordem sob a Constituição.
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="minarquista"> Devem ser a ÚNICA função mantida pelo Estado mínimo.
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q1" value="ancap"> Devem ser totalmente providas por empresas privadas e agências de arbitragem em livre concorrência.
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question">
+              <h4>2. Como você enxerga a tributação?</h4>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="classico" required> Um mal necessário para financiar serviços essenciais com baixa alíquota.
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="minarquista"> Deve ser reduzida ao mínimo absoluto, buscando formas de arrecadação voluntária.
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q2" value="ancap"> É agressão compulsória (imposto é roubo) e deve ser abolida.
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question">
+              <h4>3. Qual sua posição sobre criptomoedas e concorrência monetária?</h4>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="classico" required> Criptoativos devem ser regulados levemente contra fraudes e lavagem de dinheiro.
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="libertario"> O Estado não deve emitir nem controlar moedas; o mercado livre decide a moeda de troca.
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q3" value="ancap"> Criptomoedas são ferramentas vitais de agorismo e soberania contra o monopólio estatal.
+                </label>
+              </div>
+            </div>
+
+            <div class="quiz-question">
+              <h4>4. Como resolver conflitos ambientais e de poluição?</h4>
+              <div class="quiz-options">
+                <label class="quiz-option">
+                  <input type="radio" name="q3_extra" value="classico" required> Agências reguladoras independentes com mecanismos de mercado (créditos de carbono).
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q3_extra" value="minarquista"> Aplicação de direitos de propriedade e responsabilização judicial por danos a terceiros.
+                </label>
+                <label class="quiz-option">
+                  <input type="radio" name="q3_extra" value="ancap"> Contratos privados de preservação e tribunais arbitrais por violação de propriedade.
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="margin-top: 15px;">Calcular Meu Alinhamento ✦</button>
+          </form>
+
+          <div class="quiz-result" id="quiz-result">
+            <h3 style="color: var(--gold-primary); margin-bottom: 10px;" id="result-title">Seu resultado</h3>
+            <p id="result-desc" style="color: var(--text-muted);"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programa Político com Filtro -->
+    <section id="programa">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">05 / Propostas Práticas</div>
+          <h2 class="section-title">Programa de Políticas Públicas</h2>
+          <p class="section-desc">Utilize a busca ou os filtros abaixo para explorar propostas específicas por setor.</p>
+        </div>
+
+        <!-- Filter & Search Bar -->
+        <div class="filter-bar">
+          <input type="text" class="search-input" id="program-search" placeholder="🔍 Buscar por palavra-chave (ex: impostos, cripto, saúde)...">
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <button class="filter-chip active" data-filter="all">Todas</button>
+            <button class="filter-chip" data-filter="Economia">Economia</button>
+            <button class="filter-chip" data-filter="Tributos">Tributos</button>
+            <button class="filter-chip" data-filter="Cidadania">Cidadania</button>
+            <button class="filter-chip" data-filter="Tecnologia">Tecnologia</button>
+          </div>
+        </div>
+
+        <div class="cards-grid" id="program-grid">
+          <article class="card" data-category="Economia">
+            <span class="badge-pill">Economia</span>
+            <h3>Livre Iniciativa & Desregulamentação</h3>
+            <ul>
+              <li>Fim da necessidade de alvarás para atividades de baixo risco.</li>
+              <li>Abolição de subsídios e campeões nacionais.</li>
+              <li>Privatização transparente com foco na ampla concorrência.</li>
+              <li>Redução drástica de barreiras de entrada no mercado.</li>
+            </ul>
+          </article>
+
+          <article class="card" data-category="Tributos">
+            <span class="badge-pill">Tributos</span>
+            <h3>Simplificação & Redução Fiscal</h3>
+            <ul>
+              <li>Imposto unificado com alíquota baixa e transparente.</li>
+              <li>Publicação em tempo real de onde vai cada centavo arrecadado.</li>
+              <li>Não elevação de alíquotas sem aprovação direta por plebiscito.</li>
+              <li>Criação de gatilhos automáticos para corte de despesas.</li>
+            </ul>
+          </article>
+
+          <article class="card" data-category="Instituições">
+            <span class="badge-pill">Instituições</span>
+            <h3>Estado Mínimo & Transparência</h3>
+            <ul>
+              <li>Extinção de ministérios e órgãos redundantes.</li>
+              <li>Fim de privilégios, verbas indenizatórias e foro privilegiado.</li>
+              <li>Controle orçamentário rígido e responsabilidade continuada.</li>
+              <li>Limites legais rigorosos para atos regulatórios.</li>
+            </ul>
+          </article>
+
+          <article class="card" data-category="Justiça">
+            <span class="badge-pill">Justiça</span>
+            <h3>Garantias Individuais & Mediação</h3>
+            <ul>
+              <li>Devido processo legal e presunção de inocência invioláveis.</li>
+              <li>Estímulo à arbitragem voluntária e câmaras privadas de mediação.</li>
+              <li>Punição severa e efetiva para crimes com vítima (fraude, agressão).</li>
+              <li>Descarcerização para delitos sem vítima.</li>
+            </ul>
+          </article>
+
+          <article class="card" data-category="Cidadania">
+            <span class="badge-pill">Cidadania</span>
+            <h3>Liberdades Digitais & Privacidade</h3>
+            <ul>
+              <li>Criptografia forte como direito inviolável do cidadão.</li>
+              <li>Proibição de vigilância em massa ou rastreamento estatal sem ordem judicial.</li>
+              <li>Proteção contra censura ou moderação estatal da livre expressão.</li>
+              <li>Soberania de dados e transparência algorítmica pública.</li>
+            </ul>
+          </article>
+
+          <article class="card" data-category="Tecnologia">
+            <span class="badge-pill">Tecnologia</span>
+            <h3>Liberdade Monetária & IA</h3>
+            <ul>
+              <li>Concorrência monetária liberada (ouro, prata e criptoativos).</li>
+              <li>Proibição de moedas digitais de banco central (CBDCs) com poder de controle.</li>
+              <li>Regulação proporcional de IA sem sufocar inovação nacional.</li>
+              <li>Apoio a redes e protocolos abertos descentralizados.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Método de Avaliação -->
+    <section style="background: var(--navy-deep);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">06 / Métrica & Governança</div>
+          <h2 class="section-title">Avaliação Rigorosa de Políticas</h2>
+          <p class="section-desc">Critérios transparentes usados para avaliar o impacto social de cada diretriz.</p>
+        </div>
+
+        <div style="max-width: 800px;">
+          <div class="eval-bar">
+            <span>Liberdades Civis</span>
+            <div class="track"><div class="fill-bar" style="width: 100%;"></div></div>
+            <strong style="color: var(--gold-primary);">5/5</strong>
+          </div>
+          <div class="eval-bar">
+            <span>Transparência</span>
+            <div class="track"><div class="fill-bar" style="width: 100%;"></div></div>
+            <strong style="color: var(--gold-primary);">5/5</strong>
+          </div>
+          <div class="eval-bar">
+            <span>Concorrência</span>
+            <div class="track"><div class="fill-bar" style="width: 85%;"></div></div>
+            <strong style="color: var(--gold-primary);">4.25/5</strong>
+          </div>
+          <div class="eval-bar">
+            <span>Responsabilidade Fiscal</span>
+            <div class="track"><div class="fill-bar" style="width: 90%;"></div></div>
+            <strong style="color: var(--gold-primary);">4.5/5</strong>
+          </div>
+          <div class="eval-bar">
+            <span>Segurança da Transição</span>
+            <div class="track"><div class="fill-bar" style="width: 80%;"></div></div>
+            <strong style="color: var(--gold-primary);">4/5</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Integridade e Governança -->
+    <section id="governanca">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">07 / Integridade Externa & Interna</div>
+          <h2 class="section-title">Governança Transparente</h2>
+          <p class="section-desc">Quem defende a limitação do poder público deve limitar o próprio poder interno.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <h3>Democracia Interna</h3>
+            <p>Convenções abertas, votações registradas em blockchain ou sistemas auditáveis, e direito de recurso sem retaliações.</p>
+          </article>
+          <article class="card">
+            <h3>Finanças Auditadas</h3>
+            <p>Prestação de contas diária online com transparência total de doações voluntárias.</p>
+          </article>
+          <article class="card">
+            <h3>Limites de Mandato</h3>
+            <p>Rotatividade de cargos dirigentes e prevenção da concentração personalista de poder.</p>
+          </article>
+          <article class="card">
+            <h3>Proteção ao Dissenso</h3>
+            <p>Espaço garantido para teses de minoria e debates entre as correntes partidárias.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roteiro de Desenvolvimento -->
+    <section style="background: var(--navy-deep);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">08 / Caminho Estratégico</div>
+          <h2 class="section-title">Roteiro de Desenvolvimento</h2>
+          <p class="section-desc">Etapas formais de estruturação cívica, debate e validação jurídica.</p>
+        </div>
+
+        <div class="roadmap-grid">
+          <div class="step-card">
+            <span>ETAPA 01</span>
+            <h3 style="margin: 8px 0;">Consulta Cívica</h3>
+            <p style="font-size:0.9rem; color: var(--text-muted);">Reunião de entusiastas, produção de conteúdo educacional e debate dos princípios fundamentais.</p>
+          </div>
+          <div class="step-card">
+            <span>ETAPA 02</span>
+            <h3 style="margin: 8px 0;">Redação de Estatuto</h3>
+            <p style="font-size:0.9rem; color: var(--text-muted);">Consolidação de diretrizes de ética, governança e mecanismos de transparência.</p>
+          </div>
+          <div class="step-card">
+            <span>ETAPA 03</span>
+            <h3 style="margin: 8px 0;">Movimento de Base</h3>
+            <p style="font-size:0.9rem; color: var(--text-muted);">Criação de núcleos regionais de estudos e projetos voluntários de assistência social cooperativa.</p>
+          </div>
+          <div class="step-card">
+            <span>ETAPA 04</span>
+            <h3 style="margin: 8px 0;">Avaliação Jurídica</h3>
+            <p style="font-size:0.9rem; color: var(--text-muted);">Análise rigorosa junto a juristas e diretrizes formais do TSE antes de qualquer passo oficial.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">09 / Esclarecimentos</div>
+          <h2 class="section-title">Perguntas Frequentes</h2>
+        </div>
+
+        <div style="max-width: 800px;">
+          <details class="faq-item">
+            <summary>O PBALM é um partido anarcocapitalista ou minarquista?</summary>
+            <p>O PBALM acolhe ambas as visões sob a premissa de redução contínua do poder estatal. Minarquistas defendem o Estado estritamente mínimo, enquanto anarcocapitalistas propõem arranjos 100% voluntários de mercado.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como garantir a segurança pública sem Estado amplo?</summary>
+            <p>Através do foco estrito em polícia ostensiva, devido processo criminal e desregulamentação da legítima defesa do cidadão cumpridor da lei.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Como funciona o corte de impostos na prática?</summary>
+            <p>Com um plano fiscal com metas claras de redução de despesas estatais, eliminação de privilégios burocráticos e substituição por impostos simples com alíquotas decrescentes.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>O partido já está registrado no Tribunal Superior Eleitoral (TSE)?</summary>
+            <p>Não. Esta é uma iniciativa conceitual e filosófica. O registro partidário oficial exige cumprir todos os trâmites e apoios estabelecidos pela lei eleitoral vigente.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Referências -->
+    <section id="referencias" style="background: var(--navy-deep);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">10 / Leitura Recomendada</div>
+          <h2 class="section-title">Fontes Filosóficas & Legais</h2>
+        </div>
+
+        <ul class="refs-list">
+          <li><strong>John Locke:</strong> <em>Second Treatise of Government (1689)</em>. <a href="https://www.gutenberg.org/ebooks/7370" target="_blank" rel="noopener">Gutenberg Project</a></li>
+          <li><strong>Adam Smith:</strong> <em>The Wealth of Nations (1776)</em>. <a href="https://www.gutenberg.org/ebooks/3300" target="_blank" rel="noopener">Gutenberg Project</a></li>
+          <li><strong>F. A. Hayek:</strong> <em>The Constitution of Liberty (1960)</em>. Limites ao poder e regras de direito.</li>
+          <li><strong>Robert Nozick:</strong> <em>Anarchy, State, and Utopia (1974)</em>. Defesa do Estado mínimo.</li>
+          <li><strong>Murray Rothbard:</strong> <em>For a New Liberty (1973)</em>. Manifesto libertário anarcocapitalista.</li>
+          <li><strong>Ludwig von Mises:</strong> <em>Liberalism (1927)</em>. Tradição liberal clássica e livre mercado.</li>
+          <li><strong>Tribunal Superior Eleitoral:</strong> <a href="https://www.tse.jus.br/" target="_blank" rel="noopener">Portal Oficial do TSE</a></li>
+          <li><strong>Constituição Federal (1988):</strong> <a href="https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm" target="_blank" rel="noopener">Portal do Planalto</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section>
+      <div class="container">
+        <div class="cta-banner">
+          <div>
+            <h2 style="font-size: 2rem; margin-bottom: 8px; color: var(--gold-primary);">Uma sociedade mais livre começa no debate de ideias.</h2>
+            <p style="color: var(--text-muted);">Estude as propostas, compartilhe a visão e contribua para a autonomia individual no Brasil.</p>
+          </div>
+          <a href="#inicio" class="btn btn-gold">Voltar ao Início ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3 style="color: var(--gold-primary); margin-bottom: 8px;">PBALM</h3>
+        <p>Partido Brasileiro da Autonomia Libertária Minarquista</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; color: var(--text-dim);">Plataforma conceitual independente de estudos e debate político.</p>
+      </div>
+      <div>
+        <p>© <span id="year-copy"></span> PBALM • Menos Estado. Mais Liberdade.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-up-btn" aria-label="Voltar ao topo">↑</button>
+
+  <script>
+    // Theme Switcher Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
+    
+    themeToggleBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      themeIcon.textContent = newTheme === 'dark' ? '🌙' : '☀️';
+      themeText.textContent = newTheme === 'dark' ? 'Escuro' : 'Claro';
+    });
+
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const navLinks = document.getElementById('nav-links');
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Tabs Content Data
+    const tabContents = {
+      classico: {
+        title: "Liberalismo Clássico",
+        badge: "Direitos & Constitucionalismo",
+        desc: "Enfatiza a proteção dos direitos individuais, o Estado de Direito, a tolerância, o governo limitado e a economia de livre mercado.",
+        question: "Quais instituições protegem a liberdade sem concentrar poder arbitrário?"
+      },
+      minarquista: {
+        title: "Minarquismo",
+        badge: "Estado Mínimo",
+        desc: "Defende o Estado restrito ao estritamente essencial: proteção contra agressões externas e internas, segurança pública e justiça.",
+        question: "Como impedir que as funções mínimas do Estado se expandam com o tempo?"
+      },
+      libertario: {
+        title: "Libertarianismo",
+        badge: "Princípio da Não-Agressão (PNA)",
+        desc: "Tradição que prioriza a liberdade individual, a autopropriedade e a livre associação contratual, rejeitando a coerção injustificada.",
+        question: "Como resolver conflitos sociais minimizando ao máximo a intervenção estatal?"
+      },
+      ancap: {
+        title: "Anarcocapitalismo",
+        badge: "Ordem Voluntária de Mercado",
+        desc: "Defende a substituição completa do Estado por arranjos voluntários e empresas concorrenciais em um mercado livre.",
+        question: "Como assegurar a justiça e a segurança através da livre concorrência sem monopólio?"
+      }
+    };
+
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabContentEl = document.getElementById('tab-content');
+
+    function renderTab(key) {
+      const data = tabContents[key];
+      tabContentEl.innerHTML = `
+        <span class="badge-pill">${data.badge}</span>
+        <h3 style="font-size: 1.8rem; margin: 10px 0;">${data.title}</h3>
+        <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 15px;">${data.desc}</p>
+        <p style="font-size: 0.95rem;"><strong>Questão Central:</strong> ${data.question}</p>
+      `;
+    }
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderTab(btn.dataset.tab);
+      });
+    });
+    renderTab('classico');
+
+    // Interactive Quiz Logic
+    const quizForm = document.getElementById('quiz-form');
+    const quizResult = document.getElementById('quiz-result');
+    const resultTitle = document.getElementById('result-title');
+    const resultDesc = document.getElementById('result-desc');
+
+    quizForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const formData = new FormData(quizForm);
+      let scores = { classico: 0, minarquista: 0, libertario: 0, ancap: 0 };
+      
+      for (let value of formData.values()) {
+        if (scores[value] !== undefined) {
+          scores[value]++;
+        }
+      }
+
+      let topScore = 0;
+      let topTrend = 'minarquista';
+      for (let trend in scores) {
+        if (scores[trend] > topScore) {
+          topScore = scores[trend];
+          topTrend = trend;
+        }
+      }
+
+      const resultsMap = {
+        classico: { title: "Tendência: Liberalismo Clássico", desc: "Você valoriza governos constitucionalmente limitados, instituições fortes, Estado de Direito e economia de mercado com garantias sociais." },
+        minarquista: { title: "Tendência: Minarquismo", desc: "Você defende um Estado estritamente mínimo focado apenas na proteção dos direitos individuais, segurança e justiça." },
+        libertario: { title: "Tendência: Libertarianismo", desc: "Sua visão prioriza o Princípio da Não-Agressão, soberania individual e a máxima redução da intervenção governamental." },
+        ancap: { title: "Tendência: Anarcocapitalismo", desc: "Você apoia a completa eliminação do monopólio estatal em favor de um mercado 100% livre e voluntário." }
+      };
+
+      resultTitle.textContent = resultsMap[topTrend].title;
+      resultDesc.textContent = resultsMap[topTrend].desc;
+      quizResult.style.display = 'block';
+      quizResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    // Program Filter & Search
+    const searchInput = document.getElementById('program-search');
+    const filterChips = document.querySelectorAll('.filter-chip');
+    const programCards = document.querySelectorAll('#program-grid .card');
+
+    function filterProgram() {
+      const query = searchInput.value.toLowerCase();
+      const activeCategory = document.querySelector('.filter-chip.active').dataset.filter;
+
+      programCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        const category = card.dataset.category;
+
+        const matchesQuery = text.includes(query);
+        const matchesCategory = activeCategory === 'all' || category === activeCategory;
+
+        if (matchesQuery && matchesCategory) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterProgram);
+    filterChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        filterChips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        filterProgram();
+      });
+    });
+
+    // Scroll Up Button
+    const scrollUpBtn = document.getElementById('scroll-up-btn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollUpBtn.classList.add('show');
+      } else {
+        scrollUpBtn.classList.remove('show');
+      }
+    });
+
+    scrollUpBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Footer Year
+    document.getElementById('year-copy').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
