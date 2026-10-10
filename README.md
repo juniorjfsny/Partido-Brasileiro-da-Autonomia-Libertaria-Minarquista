@@ -20,3 +20,19 @@ git config user.email "junior.jfsn@yahoo.com"
 ```
 git remote -v; git status -sb; if command -v gh >/dev/null 2>&1; then gh auth status; else printf '\nGitHub CLI (gh) não está instalado.\n'; fi
 ```
+
+```
+gh auth login --hostname github.com --git-protocol https --web
+```
+
+```
+gh auth status
+```
+
+```
+git push origin main
+```
+
+```
+
+```
