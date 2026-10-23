@@ -112,6 +112,17 @@ gh auth status
 git push origin main
 ```
 
+#### Logar em uma conta no GitHub
+```
+gh auth login
+```
+
+Alternar entre as contas
+Para ativar a conta juniorjrfsn, execute:
+
+```
+gh auth switch --user juniorjrfsn
+```
 
 Para voltar à conta juniorjfsny:
 ```
