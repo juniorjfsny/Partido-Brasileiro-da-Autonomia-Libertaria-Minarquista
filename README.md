@@ -66,6 +66,18 @@ user.name = "juniorjfsny"
 user.email = "junior.jfsn@yahoo.com"
 ```
 
+#### Repositório Globais
+``` 
+git config --global user.name "juniorjfsny"
+git config --global user.email "junior.jfsn@yahoo.com"
+```
+
+#### Repositório
+``` 
+git config user.name "juniorjfsny"
+git config user.email "junior.jfsn@yahoo.com"
+``` 
+
 # PBALM
 
 contato:<junior.jfsn@yahoo.com>
