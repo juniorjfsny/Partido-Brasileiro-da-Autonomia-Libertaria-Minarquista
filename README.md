@@ -99,7 +99,6 @@ winget install --id GitHub.cli --exact
 
 ```
 
-
 ```
 gh auth login --hostname github.com --git-protocol https --web
 ```
@@ -118,10 +117,10 @@ gh auth login
 ```
 
 Alternar entre as contas
-Para ativar a conta juniorjrfsn, execute:
+Para ativar a conta juniorjfsny, execute:
 
 ```
-gh auth switch --user juniorjrfsn
+gh auth switch --user juniorjfsny
 ```
 
 Para voltar à conta juniorjfsny:
@@ -152,4 +151,9 @@ Dentro da pasta do projeto, execute:
 git config user.name
 git config user.email
 git remote -v
+```
+
+
+```link 
+https://juniorjfsny.github.io/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/
 ```
