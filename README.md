@@ -7,8 +7,6 @@ Autor: Nedir da Silva França Júnior. @juniorjfsny
 Presidente do Partido : Nedir da Silva França Júnior.
 
 
-
-
 ```link 
 https://juniorjfsny.github.io/Partido-Brasileiro-da-Autonomia-Libertaria-Minarquista/
 ```
